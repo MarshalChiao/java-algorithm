@@ -19,10 +19,12 @@ public class InsertionSort {
         for (int i = 1, j, current; i < nums.length; i++) {
             current = nums[i];
 
+            // 对i左侧的数一个一个与current比较，大于current右移1位
             for (j = i - 1; j >= 0 && nums[j] > current; j--) {
                 nums[j + 1] = nums[j];
             }
 
+            // 所有大于current的值都右移一位后，j+1的位置就为current插入的位置
             nums[j + 1] = current;
         }
     }
