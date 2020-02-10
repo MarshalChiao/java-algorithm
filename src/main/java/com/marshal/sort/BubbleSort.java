@@ -20,9 +20,10 @@ public class BubbleSort {
         boolean hasChange = true;
 
         for (int i = 0; i < nums.length - 1; i++) {
+            // 重置flag进行下次判断
             hasChange = false;
-
-            for (int j = 0; j < nums.length - i - 1; j++) {
+            // 相邻的元素进行比较，每轮结束将较大的数后移，所以每次比较排除前面已排好序的
+            for (int j = 0; j < nums.length - 1 - i; j++) {
                 if (nums[j] > nums[j + 1]) {
                     swap(nums, j, j + 1);
                     hasChange = true;
