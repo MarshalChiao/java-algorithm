@@ -19,7 +19,7 @@ public class SelectionSort {
         for (int i = 0; i < arrays.length - 1; i++) {
             // 用于保存最小的数的下标
             int minIndex = i;
-            for (int j = minIndex + 1; j < arrays.length; j++) {
+            for (int j = i + 1; j < arrays.length; j++) {
                 // 如果还有比最小的数小的数则记录下标
                 if (arrays[minIndex] > arrays[j]) {
                     minIndex = j;
